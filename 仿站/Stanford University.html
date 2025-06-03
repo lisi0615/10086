@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link type="Stanford University/css" rel="stylesheet" href="Stanford University.css">
+  <h1 style="text-align: center; font-size: 42px; font-weight: 900;">Campus Life</h1>
+  <p style="text-align: center; font-weight: 500;" class="adjusted-font">
+      Building a vibrant community of creative and accomplished 
+      <span class="break-on-fullscreen">
+          <br>people from around the world
+      </span>
+  </p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanford University Info</title>
+    <style>
+
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-container img {
+            max-width: 85%; 
+            height: auto; 
+            object-fit: contain; 
+        }
+
+        h2, h3, h4, h5, h6, h7 {
+            font-size: 16px; 
+            font-weight: normal; 
+            color: #333; 
+            margin: 5px 0; 
+        }
+
+        h2, h4, h6 {
+            font-weight: bold; 
+        }
+
+
+        .left-margin {
+            margin-left: 20px; 
+        }
+
+        .right-margin {
+            margin-right: 20px; 
+        }
+
+
+        .image-container div h2,
+        .image-container div h3,
+        .image-container div a,
+        .image-container div h4,
+        .image-container div h5,
+        .image-container div h6,
+        .image-container div h7 {
+            text-align: left;
+            width: 400px;
+        }
+
+
+        .red-rectangle {
+            width: 450px;
+            height: 65px;
+            background-color: rgb(175, 0, 0);
+            margin: 20px auto; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s; 
+        }
+
+        .red-rectangle p {
+            color: white;
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold; 
+        }
+
+        .red-rectangle:hover {
+            background-color: darkred;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-container img {
+                width: 90%; 
+            }
+            .left-margin, .right-margin {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .image-container div h2,
+            .image-container div h3,
+            .image-container div a,
+            .image-container div h4,
+            .image-container div h5,
+            .image-container div h6,
+            .image-container div h7 {
+                width: 90%;
+            }
+            .red-rectangle {
+                width: 90%;
+            }
+        }
+        .image-container div a[href="https://example.com/stanford-arts"]::after {
+            content: '>';
+            margin-left: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .image-container div a[href="https://example.com/stanford-arts"]:hover::after {
+            transform: translateX(5px);
+        }
+
+        .image-container div a[href="https://example.com/student-affairs"]::after {
+            content: '>';
+            margin-left: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .image-container div a[href="https://example.com/student-affairs"]:hover::after {
+            transform: translateX(5px);
+        }
+        .image-container div a[href="https://example.com/recreation-wellness"]::after {
+            content: '>';
+            margin-left: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .image-container div a[href="https://example.com/recreation-wellness"]:hover::after {
+            transform: translateX(5px);
+        }
+        .image-container div a[href="https://example.com/student-affairs"],
+        .image-container div a[href="https://example.com/stanford-arts"],
+        .image-container div a[href="https://example.com/recreation-wellness"] {
+            text-decoration: none;
+        }
+        .image-container div a {
+            text-decoration: none;
+        }
+        
+        .image-container div a::after {
+            content: '>';
+            margin-left: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .image-container div a:hover::after {
+            transform: translateX(5px);
+        }
+        .image-container div a {
+            text-decoration: none;
+            color: #2077dbe1; 
+        }
+        .image-container div a:hover {
+            color: #2077dbe1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="people.webp" alt="Campus-life-1" class="left-margin">
+            <h2>Student Life</h2>
+            <h3>A residential campus with diverse housing, exceptional dining, and over 600 student organizations</h3>
+            <a href="https://example.com/student-affairs" target="_blank">Student Affairs</a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="manypeople.webp" alt="Campus-life-2（1）" class="common-image">
+            <h4>Arts & Culture</h4>
+            <h5>A rich tradition of fostering creativity and a vibrant arts district on campus</h5>
+            <a href="https://example.com/stanford-arts" target="_blank">Stanford Arts</a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="nihao.webp" alt="Campus-life-3" class="common-image right-margin">
+            <h6>Recreation & Wellness</h6>
+            <h7>State-of-the-art facilities and fitness programs to encourage movement and play</h7>
+            <a href="https://example.com/recreation-wellness" target="_blank">Recreation & Wellness</a>
+        </div>
+    </div>
+    <div class="red-rectangle">
+        <p>More about athletics</p>
+    </div>
+    <h1 style="text-align: center; font-size: 42px; font-weight: 900; margin-top: 50px;">Athletics</h1>
+    <p style="text-align: center; font-size: 18px; font-weight: 500;">
+        Providing student-athletes the opportunity to achieve excellence 
+        <span class="break-on-fullscreen-athletes">
+            <br>both in competition and in the classroom
+        </span>
+    </p>
+    <div class="image-container">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="guanj.webp" alt="Athletics-image" class="common-image left-margin">
+            <h2>Home of Champions</h2>
+            <h3>Stanford’s 137 NCAA championships are the most for any university, a product of an unrivaled culture of excellence and continued support from the campus community</h3>
+            <a href="https://example.com/national-championships" target="_blank">National Championships</a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="youy.webp" alt="New-image" class="common-image">
+            <h2>Olympic Excellence</h2>
+            <h3>The Cardinal has produced at least one medalist in every Olympics in which the U.S. has competed since 1912, totaling 335 medals from 196 medalists</h3>
+            <a href="https://example.com/medals" target="_blank">Medals</a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="jiz.webp" alt="jiz-image" class="common-image right-margin">
+            <h2>Multidimensional Impact</h2>
+            <h3>Stanford student-athletes have achieved local, national, and global impact through community involvement and advocacy</h3>
+            <a href="#" target="_blank">Athlete Stories</a>
+        </div>
+    </div>
+    <div class="red-rectangle">
+        <p>More about athletics</p>
+    </div>
+</body>
+</html>
+
+<style>
+    @media (min-width: 769px) {
+        .break-on-fullscreen-athletes br {
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .break-on-fullscreen-athletes br {
+            display: none;
+        }
+    }
+    @media (min-width: 769px) {
+        .break-on-fullscreen br {
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .break-on-fullscreen br {
+            display: none;
+        }
+    }
+    .adjusted-font {
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .adjusted-font {
+            font-size: 16px; 
+        }
+    }
+
+    .bold-text {
+        font-weight: 600; 
+    }
+</style>

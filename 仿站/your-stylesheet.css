@@ -1,0 +1,114 @@
+/* ... existing code ... */
+
+.header-block {
+    width: 100%; /* 宽度为整个页面长度 */
+    height: 40px; /* 高度为 40 */
+    background-color: #8B0000; /* 暗红色 */
+    position: relative;
+}
+
+.header-text {
+    color: white; /* 白色字体 */
+    font-weight: bold; /* 粗体 */
+    position: absolute;
+    top: 70px; /* 距离方块 70 远 */
+    left: 0;
+    margin: 0;
+    padding-left: 20px; /* 为了让文字不紧贴左边，可按需调整 */
+}
+
+/* ... existing code ... */
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto; 
+  object-fit: contain; 
+}
+
+h2, h3, h4, h5, h6, h7 {
+  font-size: 16px; 
+  font-weight: normal; 
+  color: #333; 
+  margin: 5px 0; 
+}
+
+h2, h4, h6 {
+  font-weight: bold; 
+}
+
+.left-margin {
+  margin-left: 20px; 
+}
+
+.right-margin {
+  margin-right: 20px; 
+}
+
+.image-container div h2,
+.image-container div h3,
+.image-container div a,
+.image-container div h4,
+.image-container div h5,
+.image-container div h6,
+.image-container div h7 {
+  text-align: left;
+  width: 400px;
+}
+
+.red-rectangle {
+  width: 450px;
+  height: 65px;
+  background-color: rgb(175, 0, 0);
+  margin: 20px auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s; 
+}
+
+.red-rectangle p {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold; 
+}
+
+.red-rectangle:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .image-container img {
+      width: 90%; 
+  }
+  .left-margin, .right-margin {
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .image-container div h2,
+  .image-container div h3,
+  .image-container div a,
+  .image-container div h4,
+  .image-container div h5,
+  .image-container div h6,
+  .image-container div h7 {
+      width: 90%;
+  }
+  .red-rectangle {
+      width: 90%;
+  }
+}

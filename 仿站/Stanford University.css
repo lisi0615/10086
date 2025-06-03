@@ -1,0 +1,277 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    /* 修改间隙为 40px */
+    gap: 40px; 
+}
+
+/* 调整通用图片类的大小 */
+.common-image {
+    max-width: 80%; /* 可根据需要调整这个值，值越小图片越小 */
+    max-height: auto;
+    /* 保持图片比例 */
+    height: auto; 
+}
+
+/* 不同屏幕尺寸的响应式设计 */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; 
+    }
+    /* 小屏幕下调整图片最大宽度 */
+    .common-image {
+        max-width: 70%; /* 小屏幕下进一步调小，可按需调整 */
+    }
+    /* 小屏幕下重置边距 */
+    .left-margin, .right-margin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* 小屏幕下调整字体大小 */
+    h2, h3, h4, h5, h6, h7 {
+        font-size: 14px; 
+        white-space: normal; /* 小屏幕下允许文字换行 */
+    }
+    .red-rectangle p {
+        font-size: 16px; 
+        white-space: normal; /* 小屏幕下允许文字换行 */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* 中等屏幕下调整字体大小 */
+    h2, h3, h4, h5, h6, h7 {
+        font-size: 15px; 
+    }
+    .red-rectangle p {
+        font-size: 17px; 
+    }
+}
+a:hover {
+    text-decoration: underline;
+}
+h1.section-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    font-variation-settings: 'wght' 950;
+}
+
+h1.section-title.with-top-margin {
+    margin-top: 50px;
+}
+
+.adjusted-font {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px; 
+}
+
+@media (max-width: 768px) {
+    .adjusted-font {
+        font-size: 20px; 
+    }
+}
+
+@media (min-width: 769px) {
+    .break-on-fullscreen br {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .break-on-fullscreen br {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .break-on-fullscreen-athletes br {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .break-on-fullscreen-athletes br {
+        display: none;
+    }
+}
+
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: nowrap; 
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: contain; 
+}
+
+h2, h3, h4, h5, h6, h7 {
+    font-size: 16px; 
+    font-weight: normal; 
+    color: #333; 
+    margin: 5px 0; 
+}
+
+h2, h4, h6 {
+    font-weight: bold; 
+}
+
+.left-margin {
+    margin-left: 20px; 
+}
+
+.right-margin {
+    margin-right: 20px; 
+}
+
+.image-container div h2,
+.image-container div h3,
+.image-container div a,
+.image-container div h4,
+.image-container div h5,
+.image-container div h6,
+.image-container div h7 {
+    text-align: left;
+    width: 400px;
+}
+
+.red-rectangle {
+    width: 450px;
+    height: 65px;
+    background-color: rgb(175, 0, 0);
+    margin: 20px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s; 
+}
+
+.red-rectangle p {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+.red-rectangle:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: row; 
+        align-items: center;
+        gap: 20px; 
+    }
+    .image-container img {
+        width: 90%; 
+    }
+    .left-margin, .right-margin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .image-container div h2,
+    .image-container div h3,
+    .image-container div a,
+    .image-container div h4,
+    .image-container div h5,
+    .image-container div h6,
+    .image-container div h7 {
+        width: 90%;
+    }
+    .red-rectangle {
+        width: 90%;
+    }
+    h2, h3, h4, h5, h6, h7 {
+        font-size: 14px; 
+        white-space: normal; 
+    }
+    .red-rectangle p {
+        font-size: 16px; 
+        white-space: normal; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    h2, h3, h4, h5, h6, h7 {
+        font-size: 15px; 
+    }
+    .red-rectangle p {
+        font-size: 17px; 
+    }
+}
+
+.image-container div a[href="https://example.com/stanford-arts"]::after {
+    content: '>';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.image-container div a[href="https://example.com/stanford-arts"]:hover::after {
+    transform: translateX(5px);
+}
+
+.image-container div a[href="https://example.com/student-affairs"]::after {
+    content: '>';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.image-container div a[href="https://example.com/student-affairs"]:hover::after {
+    transform: translateX(5px);
+}
+.image-container div a[href="https://example.com/recreation-wellness"]::after {
+    content: '>';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.image-container div a[href="https://example.com/recreation-wellness"]:hover::after {
+    transform: translateX(5px);
+}
+.image-container div a[href="https://example.com/student-affairs"],
+.image-container div a[href="https://example.com/stanford-arts"],
+.image-container div a[href="https://example.com/recreation-wellness"] {
+    text-decoration: none;
+}
+/* 去掉超链接下划线 */
+.image-container div a {
+    text-decoration: none;
+}
+
+.image-container div a::after {
+    content: '>';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.image-container div a:hover::after {
+    transform: translateX(5px);
+}
+
+.adjust-font-size {
+    font-size: calc(100% + 2px); 
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .adjust-font-size {
+        font-size: calc(100% + 1px); 
+    }
+}
